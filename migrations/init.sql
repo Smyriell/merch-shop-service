@@ -19,7 +19,7 @@ ON CONFLICT (product_name) DO NOTHING;
 
 CREATE TABLE IF NOT EXISTS users (
     id SERIAL PRIMARY KEY,
-    user_name TEXT NOT NULL UNIQUE,
+    email TEXT NOT NULL UNIQUE,
     password TEXT NOT NULL,
     balance INT NOT NULL DEFAULT 1000,
     created_at TIMESTAMP NOT NULL DEFAULT NOW()
